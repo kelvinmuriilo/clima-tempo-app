@@ -1,0 +1,51 @@
+<div class="container">
+    <ng-container *ngIf="mostrarAreaTemperatura()">
+        <div class="area-temperatura">
+            <div class="container-cidade">
+                <p class="area-tempetura__cidade">
+                    {{ temperatura.city}}
+                </p>
+                <button onclick="mostrarAreaTemperatura()">
+
+                </button><i class="fa fa-times"></i>
+            </div>
+          
+            <p class="area-tempetura__temperatura">
+                {{ temperatura.temp }}°C {{ temperatura.description }}
+            </p>
+            <p class="area-tempetura__maxmin">
+                <i class="fa fa-arrow-down"></i>
+                {{ temperatura.forecast[0].min }}° 
+            
+                <i class="fa fa-arrow-up"></i>
+               {{ temperatura.forecast[0].max }}°
+            </p>
+            <p class="area-temperatura__vento-humidade">
+                Vento <span style="margin-right: 20px;" class="bolder">{{ temperatura.wind_speedy }}</span>
+                Humidade <span class="bolder">{{ temperatura.humidity }}%</span>
+            </p>
+            <hr>
+    
+            <ul class="area-temperatura__lista">
+                <li class="area-temperatura__item" *ngFor="let temperatura of temperatura.forecast">
+                    <span>{{ temperatura.weekday }}</span>
+                    <div class="area-min-max">
+                        <span>{{ temperatura.min }}°</span>
+                        <span>{{ temperatura.max }}°</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </ng-container>
+    
+
+    <div class="area-input-pesquisa">
+        <input-search 
+            classeIcone="fa-search" 
+            [formControl]="formPesquisa.controls['cidade']"
+            placeholder="Insira aqui o nome da cidade"
+            (eventoClick)="buscarCidade()">
+        </input-search>
+    </div>
+</div>
+

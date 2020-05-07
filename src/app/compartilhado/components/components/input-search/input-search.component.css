@@ -1,0 +1,25 @@
+.input-group{
+    background-color: #fff;
+    display: flex;
+}
+
+input{
+    margin-left:10px;
+    border: none;
+    height: 40px;
+    width: 90%;
+    outline: 0;
+    font-size: 1.4em;
+    color:rgb(80,80,80);
+}
+
+button{
+    width: 10%;
+    border: none;
+    background-color: white;
+    outline: 0;
+
+}
+button:hover{
+    cursor: pointer;
+}

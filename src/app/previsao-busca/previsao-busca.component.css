@@ -1,0 +1,83 @@
+i{
+    color: rgb(255,155,2);
+    font-size: 1.4em;
+}
+
+hr{
+    border: 0.5px solid rgb(255,155,2);
+}
+
+.bolder{
+    font-weight: bold;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.area-temperatura{
+    padding: 10px 20px;
+    width: 25%;
+    background-color: rgb(255,243,228);
+}
+
+.container-cidade{
+    display: flex;
+    justify-content:space-between;
+}
+
+.area-tempetura__cidade{
+    font-weight: bold;
+    color: rgb(128,125,120);
+    margin-bottom: 0;
+}
+
+.area-tempetura__temperatura{
+    margin: 10px 0px;
+    font-size: 2.5em;
+    font-weight: bolder;
+    color:rgb(80,80,80);
+}
+
+.area-temperatura__vento-humidade{
+    color: rgb(106,105,103);
+}
+
+.area-tempetura__maxmin{
+    font-weight: bold;
+    color: rgb(80,80,80);
+}
+
+.area-temperatura__lista{
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.area-temperatura__item{
+    width: 20%;
+    margin-left: 0;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: rgb(133,130,125);
+}
+
+.area-min-max{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    color:rgb(255,155,2);
+
+}
+
+.area-input-pesquisa{
+    padding: 0px 20px;
+    background-color: #fff;
+    margin-top: 20px;
+    width: 25%;
+}
