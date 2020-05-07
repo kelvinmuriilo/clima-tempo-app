@@ -1,14 +1,18 @@
 <div class="input-group">
-    <div class="input-group-prepend">
-        <input 
+    <div class="row  align-items-center">
+        <div class="col-10">
+            <input 
             [type]="type" 
             [class]="class" 
             [placeholder]="placeholder" 
             [formControl]="formControl"
             (keyup)="bindPressEnter($event)">
-        <button (click)="bindClick()">
-            <i class="fa {{classeIcone}}"></i>
-        </button>
+        </div>
+        <div class="col-1 ml-4 px-0 col-lg-ml-5">
+            <button (click)="bindClick()">
+                <i class="fa {{classeIcone}}"></i>
+            </button>
+        </div>
     </div>  
 </div>
 
