@@ -1,13 +1,15 @@
 <div class="input-group">
-    <input 
-        [type]="type" 
-        [class]="class" 
-        [placeholder]="placeholder" 
-        [formControl]="formControl">
-    <button (click)="bindClick()">
-        <i class="fa {{classeIcone}}"></i>
-    </button>
-    
+    <div class="input-group-prepend">
+        <input 
+            [type]="type" 
+            [class]="class" 
+            [placeholder]="placeholder" 
+            [formControl]="formControl"
+            (keyup)="bindPressEnter($event)">
+        <button (click)="bindClick()">
+            <i class="fa {{classeIcone}}"></i>
+        </button>
+    </div>  
 </div>
 
 

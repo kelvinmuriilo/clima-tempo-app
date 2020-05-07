@@ -62,4 +62,10 @@ export class InputSearchComponent implements OnInit {
     this.eventoClick.emit();
   }
 
+  bindPressEnter(event: KeyboardEvent): void{
+    if(event.keyCode === 13){
+      this.eventoClick.emit();
+    }
+  }
+
 }
