@@ -3,8 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { ClimaTempoService } from '../clima.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
-import { Temperatura } from '../app.modelo';
-
 @Component({
   selector: 'app-previsao-busca',
   templateUrl: './previsao-busca.component.html',
@@ -21,7 +19,6 @@ export class PrevisaoBuscaComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    //this.carregaTemperatura();
     this.iniciarFormPesquisa();
   }
 
@@ -33,11 +30,13 @@ export class PrevisaoBuscaComponent implements OnInit {
 
   buscarCidade(): void{
     let nomeCidade: string = this.formPesquisa.value.cidade;
-    this.climaTempoServico.getTemperatura(nomeCidade).subscribe(temp =>{
+    /* this.climaTempoServico.getTemperatura(nomeCidade).subscribe(temp =>{
       this.temperatura = temp;
       this.temperatura.forecast.shift();
       this.mostrarAreaTemperatura();
-    });
+    }); */
+    this.mostrarAreaTemperatura()
+    this.temperatura = this.climaTempoServico.getTemperatura(nomeCidade);
   }
 
   mostrarAreaTemperatura() {
